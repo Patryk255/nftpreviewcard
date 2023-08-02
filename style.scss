@@ -1,0 +1,164 @@
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$veryDarkBlue: hsl(217, 54%, 11%); // main BG
+$veryDarkBlueCard: hsl(216, 50%, 16%); // main card bg
+$veryDarkBlueLine: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$font: "Outfit", sans-serif;
+// Weights 300, 400, 600
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+
+}
+
+body {
+  background-color: $veryDarkBlue;
+  max-width: 100vw;
+  height: 100vh;
+  font-family: $font;
+}
+
+
+#card {
+    transition: all 0.8s;
+    max-width: 40rem;
+    background-color: $veryDarkBlueCard;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    border-radius: 1.5rem;
+    .inCardContent {
+      padding: 2rem;
+      hr {
+        color: $veryDarkBlueLine;
+        border: 1px solid;
+        margin-top: 1.5rem;
+      }
+      .cardMainImage {
+        position: relative;
+        .mainImage {
+          width: 100%;
+          height: auto;
+          border-radius: 1rem;
+        }
+
+        .iconView {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: none;
+          cursor: pointer;
+        }
+      }
+      .cardMainImage:hover {
+        .mainImage{
+            filter: brightness(2) opacity(0.5);
+            cursor: pointer;
+        }
+        .iconView{
+        display: block;
+        }
+    }
+
+      .cardTitle {
+        h3 {
+          color: $cyan;
+          font-size: 2.4rem;
+          font-weight: 400;
+          margin-bottom: 1rem;
+        }
+        h3:hover{
+            color: $cyan;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+      }
+      .cardDescription {
+        p {
+          margin-top: 0;
+          line-height: 1.5;
+          font-size: 1.7rem;
+          width: 24ch;
+          color: $softBlue;
+          opacity: 0.5;
+          font-weight: 300;
+        }
+      }
+      .cardInfo {
+        display: flex;
+        justify-content: space-between;
+        .price {
+          font-size: 1.6rem;
+          color: $cyan;
+          font-weight: 700;
+          img{
+            vertical-align: top;
+            margin-right: 0.5rem;
+          }
+        }
+        .daysLeft {
+          font-size: 1.4rem;
+          color: $softBlue;
+
+          .clockIcon {
+            margin-right: 0.5rem;
+            vertical-align: text-top;
+          }
+        }
+      }
+      .authorInfo {
+        display: flex;
+        justify-content: flex-start;
+
+        .authorImage {
+          margin-top: 1rem;
+          img {
+            width: 3rem;
+            height: auto;
+            border: 1px solid $white;
+            border-radius: 50%;
+            margin-right: 2rem;
+          }
+        }
+        .authorName {
+          p {
+            font-size: 1.6rem;
+            color: $white;
+            span {
+              color: $softBlue;
+              opacity: 1;
+            }
+            
+          }
+          p:hover{
+            color: $cyan;
+            cursor: pointer;
+
+        }
+        }
+      }
+    }
+  }
+
+
+
+    
+
+@media (width <= 40em) {
+    #card {
+        max-width: 90%;
+        .inCardContent{
+            .cardDescription{
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+  }
+
+ 
