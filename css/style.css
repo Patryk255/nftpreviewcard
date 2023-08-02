@@ -21,7 +21,7 @@ body {
   border-radius: 1.5rem;
 }
 #card .inCardContent {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 #card .inCardContent hr {
   color: hsl(215, 32%, 27%);
@@ -95,6 +95,7 @@ body {
 #card .inCardContent .authorInfo {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 2rem;
 }
 #card .inCardContent .authorInfo .authorImage {
   margin-top: 1rem;

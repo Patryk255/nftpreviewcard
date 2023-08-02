@@ -31,7 +31,7 @@ body {
     margin-top: 5rem;
     border-radius: 1.5rem;
     .inCardContent {
-      padding: 2rem;
+      padding: 2.5rem;
       hr {
         color: $veryDarkBlueLine;
         border: 1px solid;
@@ -113,6 +113,7 @@ body {
       .authorInfo {
         display: flex;
         justify-content: flex-start;
+        margin-bottom: 2rem;
 
         .authorImage {
           margin-top: 1rem;
